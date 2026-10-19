@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Training TKBT (Tenaga Kerja Bangunan Tinggi) | Sertifikasi Kemnaker RI & BNSP')</title>
     <meta name="description" content="@yield('meta_description', 'Pusat pembinaan, bimbingan teknis, dan sertifikasi resmi K3 TKBT (Ruang Terbatas) Muda, Madya, Utama, dan Penyelamat (Rescue) standar Kemnaker RI dan BNSP.')">
+    <meta name="google-site-verification" content="3Ckz-2QDkBqUq6vyGKN-oAPXMhEPSh_sJhUEGGTZzL4" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6J85W8EG0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-E6J85W8EG0');
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">

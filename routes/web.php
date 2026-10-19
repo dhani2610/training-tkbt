@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ProgramController;
 use App\Http\Controllers\Admin\ArticleController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\ContactController;
+use App\Http\Controllers\SitemapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,7 @@ Route::get('/wilayah/{provinceSlug}/{kabkotSlug}/{kecamatanSlug}/{articleSlug}',
 Route::get('/hubungi-kami', [FrontController::class, 'contact'])->name('contact');
 Route::redirect('/kontak', '/hubungi-kami');
 Route::post('/hubungi-kami/kirim', [FrontController::class, 'contactSubmit'])->name('contact.submit');
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 
 /*
@@ -83,5 +85,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/contacts/{contact}', [ContactController::class, 'show'])->name('contacts.show');
         Route::post('/contacts/{contact}/replied', [ContactController::class, 'markAsReplied'])->name('contacts.replied');
         Route::delete('/contacts/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy');
+
+        // 6. XML Sitemap Generator
+        Route::post('/sitemap/generate', [SitemapController::class, 'generateAdmin'])->name('sitemap.generate');
     });
 });
