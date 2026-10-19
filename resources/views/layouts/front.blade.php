@@ -1040,6 +1040,120 @@
             overflow-wrap: break-word;
         }
 
+        .article-rich-text {
+            color: #1e293b;
+            font-size: 0.96rem;
+            line-height: 1.85;
+            word-wrap: break-word;
+        }
+
+        .article-rich-text h2 {
+            font-size: 1.32rem;
+            font-weight: 800;
+            color: #064e3b;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecfdf5;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            line-height: 1.35;
+        }
+
+        .article-rich-text h2::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 22px;
+            background: #10b981;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .article-rich-text h3 {
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: #047857;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .article-rich-text p {
+            margin-bottom: 18px;
+            color: #334155;
+            line-height: 1.85;
+            text-align: justify;
+        }
+
+        .article-rich-text ul, .article-rich-text ol {
+            margin-bottom: 20px;
+            padding-left: 24px;
+            color: #334155;
+        }
+
+        .article-rich-text li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .article-rich-text strong {
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .article-rich-text table {
+            width: 100%;
+            margin: 24px 0;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            display: table;
+        }
+
+        .article-rich-text table th {
+            background: #ecfdf5;
+            color: #065f46;
+            padding: 12px 14px;
+            font-weight: 700;
+            border: 1px solid #d1fae5;
+            text-align: left;
+        }
+
+        .article-rich-text table td {
+            padding: 10px 14px;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+            vertical-align: top;
+        }
+
+        .article-rich-text table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .article-rich-text code {
+            background: #f1f5f9;
+            color: #0f766e;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.88rem;
+            font-family: monospace;
+        }
+
+        .article-rich-text blockquote {
+            border-left: 4px solid #10b981;
+            background: #f0fdf4;
+            padding: 14px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            color: #065f46;
+            font-style: italic;
+        }
+
+
         
         /* MULTI-AGENT FLOATING WHATSAPP POPUP */
         .wa-widget-container {

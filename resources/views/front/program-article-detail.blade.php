@@ -115,31 +115,30 @@
                             </div>
                         </div>
 
-                        <!-- FULL 6,000 - 9,000 WORD CONTENT (RENDER 28 CHAPTERS) -->
-                        <div class="article-rich-text" style="color: #1e293b; font-size: 0.95rem; line-height: 1.85;">
-                            @php
-                                $paragraphs = explode("\n\n", $article->content);
-                            @endphp
-
-                            @foreach($paragraphs as $para)
-                                @if(str_starts_with(trim($para), 'BAB '))
-                                    <div style="margin-top: 36px; margin-bottom: 16px; border-top: 2px solid #ecfdf5; padding-top: 24px;">
+                        <!-- FULL 6,000 - 9,000 WORD CONTENT (HTML RENDERED) -->
+                        <div class="article-rich-text">
+                            @if(str_contains($article->content, '<h2') || str_contains($article->content, '<p>') || str_contains($article->content, '<div'))
+                                {!! $article->content !!}
+                            @else
+                                @php
+                                    $paragraphs = explode("\n\n", $article->content);
+                                @endphp
+                                @foreach($paragraphs as $para)
+                                    @if(str_starts_with(trim($para), 'BAB '))
                                         @php
                                             $lines = explode("\n", trim($para));
                                             $header = array_shift($lines);
                                             $body = implode("\n", $lines);
                                         @endphp
-                                        <h2 style="font-size: 1.25rem; font-weight: 800; color: #064e3b; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-                                            <i class="bi bi-journal-text" style="color: #10b981;"></i> {{ $header }}
-                                        </h2>
+                                        <h2>{{ $header }}</h2>
                                         @if(!empty($body))
-                                            <p style="white-space: pre-line; margin-bottom: 16px; color: #334155;">{{ $body }}</p>
+                                            <p>{{ $body }}</p>
                                         @endif
-                                    </div>
-                                @else
-                                    <p style="white-space: pre-line; margin-bottom: 18px; color: #334155;">{{ trim($para) }}</p>
-                                @endif
-                            @endforeach
+                                    @else
+                                        <p>{{ trim($para) }}</p>
+                                    @endif
+                                @endforeach
+                            @endif
                         </div>
 
                         <!-- Article End CTA Banner -->
