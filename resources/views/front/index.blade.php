@@ -63,14 +63,14 @@
         </div>
     </section>
 
-    <!-- SECTION 1: 4 PROGRAM TRAINING CONFINED SPACE -->
+    <!-- SECTION 1: PROGRAM TRAINING TKBT KEMNAKER RI -->
     <section class="section-py" id="program">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Kurikulum & Sertifikasi</span>
-                <h2 class="section-title">Empat (4) Program Resmi Pelatihan TKBT (Ketinggian)</h2>
+                <span class="section-tag">Kurikulum & Sertifikasi Kemnaker RI</span>
+                <h2 class="section-title">Program Resmi Pelatihan & Sertifikasi TKBT Kemnaker RI</h2>
                 <p class="section-desc">
-                    Program sertifikasi berjenjang sesuai amanat Permenaker No. 9 Tahun 2016 untuk teknisi masuk (entrant), petugas jaga (standby person), pengawas utama, dan tim penyelamat darurat.
+                    Program pembinaan dan sertifikasi kompetensi resmi Kemnaker RI untuk Tenaga Kerja Bangunan Tinggi (TKBT Tingkat 1 & Tingkat 2) sesuai amanat Permenaker No. 9 Tahun 2016.
                 </p>
             </div>
 
@@ -84,8 +84,8 @@
                     @endphp
                     <div class="program-card">
                         <div class="program-img-wrapper">
-                            <img src="{{ $progObj->image ?? 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80' }}" alt="{{ $progObj->title }}" class="program-img" loading="lazy">
-                            <span class="program-badge">{{ $progObj->badge ?? 'Sertifikasi Resmi' }}</span>
+                            <img src="{{ $progObj->image ?? 'https://images.unsplash.com/photo-1541888946425-d0fbb18615f3?w=800&auto=format&fit=crop&q=80' }}" alt="{{ $progObj->title }}" class="program-img" loading="lazy">
+                            <span class="program-badge">{{ $progObj->badge ?? 'Sertifikasi Kemnaker RI' }}</span>
                         </div>
 
                         <div class="program-body">
@@ -96,7 +96,7 @@
                             </p>
 
                             <div class="program-meta">
-                                <div><i class="bi bi-clock-history" style="color: #10b981;"></i> {{ $progObj->duration ?? '3 - 4 Hari' }}</div>
+                                <div><i class="bi bi-clock-history" style="color: #10b981;"></i> {{ $progObj->duration ?? '3 Hari' }}</div>
                                 <div><i class="bi bi-award" style="color: #10b981;"></i> {{ $progObj->certification_body ?? 'Kemnaker RI & BNSP' }}</div>
                             </div>
 
@@ -116,7 +116,7 @@
             <!-- 4 WHATSAPP HOTLINES COMPONENT -->
             <div class="wa-hotlines-box">
                 <div class="wa-hotlines-header">
-                    <h3><i class="bi bi-telephone-inbound-fill" style="color: var(--accent-mint); margin-right: 8px;"></i> Empat (4) Hotline Resmi Layanan Konsultasi & Pendaftaran</h3>
+                    <h3><i class="bi bi-telephone-inbound-fill" style="color: var(--accent-mint); margin-right: 8px;"></i> 4 Nomor Hotline Resmi Layanan Konsultasi & Pendaftaran</h3>
                     <p>Hubungi petugas spesialis kami sesuai dengan kebutuhan informasi jadwal, modul teknis, atau pelatihan korporasi:</p>
                 </div>
 
@@ -141,55 +141,55 @@
         </div>
     </section>
 
-    <!-- SECTION 2: KEUNGGULAN PEMBINAAN K3 RUANG TERBATAS -->
+    <!-- SECTION 2: KEUNGGULAN PEMBINAAN K3 KETINGGIAN TKBT -->
     <section class="section-py section-bg-light" id="keunggulan">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Mengapa Memilih Kami</span>
-                <h2 class="section-title">Standar Keselamatan Tanpa Kompromi</h2>
+                <span class="section-tag">Keunggulan Pelatihan</span>
+                <h2 class="section-title">Standar Keselamatan Kerja Pada Ketinggian</h2>
                 <p class="section-desc">
-                    Bekerja di dalam confined space memiliki potensi bahaya fatal seketika (IDLH). Kami memastikan setiap peserta menguasai keterampilan riil mitigasi risiko.
+                    Bekerja pada ketinggian memiliki potensi bahaya jatuh fatal. Kami memastikan setiap peserta menguasai keterampilan riil inspeksi APD, manuver tower, dan penyelamatan mandiri.
                 </p>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
                 <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 26px; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
                     <div style="width: 48px; height: 48px; background: #ecfdf5; color: #059669; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 16px;">
-                        <i class="bi bi-speedometer2"></i>
+                        <i class="bi bi-shield-shaded"></i>
                     </div>
-                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Multi-Gas Detector Hands-on</h3>
+                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Harness EN 361 & Lanyard EN 355</h3>
                     <p style="font-size: 0.86rem; color: #64748b; line-height: 1.6;">
-                        Praktik langsung uji fungsi (bump test), kalibrasi nol udara segar, dan pemantauan kontinu 4 gas maut (O2, LEL, CO, H2S) secara real-time.
+                        Praktik fitting Full Body Harness, inspeksi webbing jahitan, pengoperasian energy absorber, dan kalkulasi jarak bebas jatuh TFCD.
                     </p>
                 </div>
 
                 <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 26px; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
                     <div style="width: 48px; height: 48px; background: #ecfdf5; color: #059669; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 16px;">
-                        <i class="bi bi-mask"></i>
+                        <i class="bi bi-link-45deg"></i>
                     </div>
-                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Unit Full Body Harness & Lanyard 300 Bar Bertekanan Positif</h3>
+                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Teknik Manuver 100% Tie-Off</h3>
                     <p style="font-size: 0.86rem; color: #64748b; line-height: 1.6;">
-                        Simulasi pengoperasian tabung silinder komposit Full Body Harness & Lanyard, pengecekan tekanan low-pressure whistle alarm, dan uji kerapatan masker (fit testing).
+                        Simulasi pemanjatan tower telekomunikasi kisi, perancah konstruksi, instalasi horizontal lifeline EN 795, dan penjangkaran balok baja.
                     </p>
                 </div>
 
                 <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 26px; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
                     <div style="width: 48px; height: 48px; background: #ecfdf5; color: #059669; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 16px;">
-                        <i class="bi bi-lock-fill"></i>
+                        <i class="bi bi-heart-pulse-fill"></i>
                     </div>
-                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Isolasi Energi LOTO & Ventilasi</h3>
+                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Mitigasi Trauma Suspensi</h3>
                     <p style="font-size: 0.86rem; color: #64748b; line-height: 1.6;">
-                        Prosedur penguncian katup mekanikal dan panel elektrik (Lockout / Tagout) serta pengoperasian blower ventilasi aksial pembersih udara kotor.
+                        Prosedur penyelamatan korban tergantung di safety harness, pemasangan relief footloop strap, dan larangan posisi tidur terlentang pasca jatuh.
                     </p>
                 </div>
 
                 <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 26px; box-shadow: 0 2px 6px rgba(0,0,0,0.03);">
                     <div style="width: 48px; height: 48px; background: #ecfdf5; color: #059669; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 16px;">
-                        <i class="bi bi-life-preserver"></i>
+                        <i class="bi bi-patch-check-fill"></i>
                     </div>
-                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Tripod Rescue & Penyelamatan</h3>
+                    <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;">Lisensi Resmi Kemnaker RI</h3>
                     <p style="font-size: 0.86rem; color: #64748b; line-height: 1.6;">
-                        Instalasi tripod keselamatan di atas lubang manhole, winch man-riding otomatis, fall arrest block, dan teknik evakuasi korban darurat tanpa masuk.
+                        Penerbitan Sertifikat Pembinaan dan Lisensi K3 (Kartu Kewenangan) resmi dari Kementerian Ketenagakerjaan Republik Indonesia.
                     </p>
                 </div>
             </div>
