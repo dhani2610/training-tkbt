@@ -1616,7 +1616,7 @@
                         </div>
                     </div>
                     <p class="footer-desc">
-                        Lembaga resmi informasi, bimbingan teknis, dan sertifikasi keselamatan kerja K3 Ruang Terbatas (TKBT) berstandar Kemnaker RI, BNSP, dan internasional OSHA 1910.146.
+                        Lembaga resmi informasi, bimbingan teknis, dan sertifikasi keselamatan kerja K3 Tenaga Kerja Bangunan Tinggi (TKBT) berstandar Kemnaker RI sesuai Permenaker No. 9 Tahun 2016.
                     </p>
                     <div style="margin-bottom: 16px;">
                         <span style="font-size: 0.76rem; color: #6ee7b7; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 6px;">Hotline Utama Layanan:</span>
@@ -1629,10 +1629,9 @@
                 <div class="footer-col">
                     <h4>Program Resmi</h4>
                     <ul class="footer-links">
-                        <li><a href="{{ route('program.detail', 'training-confined-space-muda') }}">Training TKBT Muda</a></li>
-                        <li><a href="{{ route('program.detail', 'training-confined-space-madya') }}">Training TKBT Madya</a></li>
-                        <li><a href="{{ route('program.detail', 'training-confined-space-utama') }}">Training TKBT Utama</a></li>
-                        <li><a href="{{ route('program.detail', 'training-penyelamat-rescue-confined-space') }}">Training Penyelamat (Rescue)</a></li>
+                        <li><a href="{{ route('program.detail', 'training-tkbt-tingkat-1') }}">Training TKBT Tingkat 1</a></li>
+                        <li><a href="{{ route('program.detail', 'training-tkbt-tingkat-2') }}">Training TKBT Tingkat 2</a></li>
+                        <li><a href="{{ route('programs') }}">Semua Program TKBT</a></li>
                     </ul>
                 </div>
 
