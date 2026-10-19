@@ -13,11 +13,11 @@
                 <a href="{{ route('home') }}" style="color: #cbd5e1;"><i class="bi bi-house-door"></i> Beranda</a>
                 <span>/</span>
                 <a href="{{ route('wilayah.provinsi', $province['slug']) }}" style="color: #cbd5e1;">Provinsi {{ $province['name'] }}</a>
-                @if(isset($kabkotSlug) && isset($kabkotName))
+                @if(!empty($kabkotSlug) && !empty($kabkotName))
                     <span>/</span>
                     <a href="{{ route('wilayah.kabkot', [$province['slug'], $kabkotSlug]) }}" style="color: #cbd5e1;">{{ $kabkotName }}</a>
                 @endif
-                @if(isset($kecamatanName))
+                @if(!empty($kecamatanName))
                     <span>/</span>
                     <span style="color: #cbd5e1;">Kecamatan {{ $kecamatanName }}</span>
                 @endif

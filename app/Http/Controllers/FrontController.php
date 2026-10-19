@@ -326,25 +326,54 @@ class FrontController extends Controller
     /**
      * 7. Program + Region Dynamic Route
      */
-    public function programRegion($programSlug, $provinceSlug, $kabkotSlug = null, $kecamatanSlug = null)
+    public function programRegion($p1, $p2 = null, $p3 = null, $p4 = null)
     {
+        $provinceSlug = null;
+        $kabkotSlug = null;
+        $kecamatanSlug = null;
+        $programSlug = null;
+
+        if ($p4 !== null) {
+            // 4 parameters: province, kabkot, kecamatan, program
+            $provinceSlug = $p1;
+            $kabkotSlug = $p2;
+            $kecamatanSlug = $p3;
+            $programSlug = $p4;
+        } elseif ($p3 !== null) {
+            // 3 parameters: province, kabkot, program
+            $provinceSlug = $p1;
+            $kabkotSlug = $p2;
+            $programSlug = $p3;
+        } else {
+            // 2 parameters: check whether $p1 is province or program
+            if (RegionService::findProvince($p1)) {
+                $provinceSlug = $p1;
+                $programSlug = $p2;
+            } else {
+                $programSlug = $p1;
+                $provinceSlug = $p2;
+            }
+        }
+
         $program = Program::where('slug', $programSlug)->first();
         if (!$program) {
             $all = TkbtSchemeService::getMasterPrograms();
             foreach ($all as $p) {
                 if ($p['slug'] === $programSlug) {
-                    $program = (object) $p;
+                    $program = $p;
                     break;
                 }
             }
             if (!$program) {
-                abort(404, 'Program tidak ditemukan.');
+                abort(404, 'Program tidak ditemukan: ' . $programSlug);
             }
         }
 
+        $program = is_array($program) ? $program : (method_exists($program, 'toArray') ? $program->toArray() : (array) $program);
+
         $province = RegionService::findProvince($provinceSlug);
         if (!$province) {
-            abort(404, 'Provinsi tidak ditemukan.');
+            abort(404, 'Provinsi tidak ditemukan: ' . $provinceSlug);
         }
 
         $kabkotData = null;
@@ -366,12 +395,13 @@ class FrontController extends Controller
         $regionName = trim(($regionContext['district'] ? $regionContext['district'] . ', ' : '') . ($regionContext['city'] ? $regionContext['city'] . ', ' : '') . $regionContext['province']);
         $regionalArticles = TkbtSchemeService::getRegionalArticleList($regionContext, 200);
 
-        $waLink = $this->getWaLink($regionName, $program->title);
-        $waNumbers = $this->get4WaHotlines($regionName, $program->title);
+        $waLink = $this->getWaLink($regionName, $program['title']);
+        $waNumbers = $this->get4WaHotlines($regionName, $program['title']);
         $mapUrl = RegionService::getMapUrl($regionName);
 
         $kabkotName = $kabkotData ? $kabkotData['name'] : '';
         $kabkotSlug = $kabkotData ? $kabkotData['slug'] : '';
+        $kecamatanName = $kecamatanData ? $kecamatanData['name'] : '';
         $kecamatanList = $kabkotData ? ($kabkotData['kecamatan'] ?? []) : [];
         $articles = $regionalArticles;
         $mapsUrl = $mapUrl;
@@ -382,10 +412,12 @@ class FrontController extends Controller
             'kabkotData',
             'kabkotName',
             'kabkotSlug',
+            'kecamatanName',
             'kecamatanList',
             'kecamatanData',
             'articles',
             'regionalArticles',
+            'regionName',
             'waLink',
             'waNumbers',
             'mapUrl',
@@ -417,8 +449,9 @@ class FrontController extends Controller
         return view('front.articles', compact('articles', 'allTopics', 'provinces', 'waLink', 'waNumbers'));
     }
 
-    public function articleDetail($slug)
+    public function articleDetail(...$args)
     {
+        $slug = end($args);
         $article = TkbtSchemeService::getOrSynthesizeArticle($slug);
         if (!$article) {
             abort(404, 'Artikel panduan tidak ditemukan.');
